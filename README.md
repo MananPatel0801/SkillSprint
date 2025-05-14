@@ -23,6 +23,12 @@ SkillSprint is a responsive web application that allows users to generate a **6-
 
 ---
 
+## 🧪 Demo
+
+Live app:  
+👉 https://skill-sprint-xi.vercel.app/
+---
+
 ## 📝 Getting Started (Development Setup)
 
 1. Clone the repository:
