@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
+    --foreground: 0 0% 3.9%; /* Near Black */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 3.9%; /* Near Black */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 3.9%; /* Near Black */
+
+    --primary: 180 100% 25.1%; /* Teal #008080 */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 0 0% 90%; /* Slightly darker gray than background */
+    --secondary-foreground: 0 0% 9%; /* Dark Gray */
+
+    --muted: 0 0% 85%; /* Muted gray, slightly darker than secondary */
+    --muted-foreground: 0 0% 45.1%; /* Muted text color */
+
+    --accent: 300 100% 25.1%; /* Purple #800080 */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 84.2% 60.2%; /* Default Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 0 0% 89.8%; /* Default Border */
+    --input: 0 0% 89.8%; /* Default Input */
+    --ring: 300 100% 25.1%; /* Accent Purple for rings */
+
+    --radius: 0.5rem;
+    
+    /* Chart colors - can be themed if charts are used */
+    --chart-1: 180 80% 40%; /* Teal-ish */
+    --chart-2: 300 80% 40%; /* Purple-ish */
+    --chart-3: 210 80% 50%; /* Blue-ish */
+    --chart-4: 40 90% 55%;  /* Orange-ish */
+    --chart-5: 120 70% 40%; /* Green-ish */
+
+    /* Sidebar specific colors - kept from original but can be themed if sidebar is complex */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 180 100% 25.1%; /* Teal */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 300 100% 25.1%; /* Purple */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 300 100% 25.1%; /* Purple */
+  }
+
+  .dark {
+    /* Dark theme - Adjust if explicit dark mode is a core feature */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 100% 35%; /* Darker Teal for dark mode */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 300 100% 35%; /* Darker Purple for dark mode */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 300 100% 45%; /* Lighter purple for dark mode ring */
+
+    --chart-1: 180 70% 50%;
+    --chart-2: 300 70% 50%;
+    --chart-3: 210 70% 60%;
+    --chart-4: 40 80% 65%;
+    --chart-5: 120 60% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 180 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 300 100% 35%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 300 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Ensures smooth scrolling behavior */
+    scroll-behavior: smooth;
+  }
+}
